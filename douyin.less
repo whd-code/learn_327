@@ -1,0 +1,146 @@
+:root {
+    font-size: 15px;
+}
+header {
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+body {
+    position: relative;
+    background-color: #111;
+}
+.red {
+    color: #C62F2F;
+}
+main {
+    color: white;
+    ul.right {
+        position: absolute;
+        right: 0.4rem;
+        bottom: 11rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: solid 0.1rem white;
+        }
+        li {
+            .fa {
+                font-size: 2rem;
+            }
+            span {
+                font-size: 0.6rem;
+            }
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    article {
+        // width: 100%;
+        position: absolute;
+        left: 0.4rem;
+        right: 0.4rem;
+         bottom: 5rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+
+        ul.left {
+            li:nth-child(1){
+                span.title {
+                    font-size: 0.8rem;
+                }
+                span:last-child {
+                    font-size: 0.8rem;
+                    color: #ddd;
+                    opacity: 0.8;
+                }
+                
+            }
+            li:nth-child(2){
+                margin-top: 0.2rem;
+                font-size: 0.8rem;
+            }
+            li:nth-child(3){
+                margin-top: 0.5rem;
+                font-size: 0.5rem;
+                .fa {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+
+
+         div.circle {
+            position: relative;
+           
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                background: #C62F2F;
+                font-size: 1.5rem;
+                color: #ffffff;
+               
+            
+                animation-name: hd;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+          
+            .fa {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                z-index: -1;
+                animation-name: rotating;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                transform-origin: -1rem -5rem;
+            }
+            .first-delay {
+                animation-delay: 1s;
+                transform-origin: 2rem -5rem;
+            }
+            .second-delay {
+                animation-delay: 3s;
+                transform-origin: 5rem -10rem;
+            }
+
+         }
+            @keyframes hd {
+                0% {
+                    transform: rotate(0deg);
+                }
+        
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotating {
+               
+        
+                100% {
+                    transform: rotate(90deg);
+                    opacity: 0;
+                }
+            }
+     
+    }
+   
+}
+video {
+    position: absolute;
+    top: 50%;
+    z-index: -10;
+    transform: translateY(-50%);
+}
